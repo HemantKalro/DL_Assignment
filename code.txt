@@ -23,7 +23,7 @@ def compute_tangent_vector(x, X, epsilon=1e-5):
         tangent_vector.append((model.predict([x_plus_eps]) - model.predict([x])) / epsilon)
     return np.concatenate(tangent_vector)
 
-# Fit a k-nearest neighbors classifier (you can use any other classifier)
+# Fit a k-nearest neighbors classifier
 model = KNeighborsClassifier(n_neighbors=3)
 model.fit(X_train, y_train)
 
